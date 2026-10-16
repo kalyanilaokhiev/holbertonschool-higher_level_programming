@@ -14,4 +14,4 @@ def serialize_and_save_to_file(data, filename):
 def load_and_deserialize(filename):
     """returns a python dictionary wih deserialized json data from file"""
     with open(filename, "r", encoding="utf-8") as f:
-        return json.dump(f)
+        return json.load(f)
