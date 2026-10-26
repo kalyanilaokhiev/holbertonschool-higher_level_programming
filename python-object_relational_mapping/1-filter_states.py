@@ -20,7 +20,8 @@ if __name__ == "__main__":
     # create query
     # states with a name starting with N
     cur.execute("SELECT * FROM states "
-                "WHERE name LIKE 'N%' "
+                # binary makes it follow exactly N not n
+                "WHERE BINARY name LIKE 'N%' "
                 "ORDER BY id ASC")
 
     # fetch data and prin
