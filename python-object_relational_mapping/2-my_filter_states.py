@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # states with a name starting with N
     cur.execute("SELECT * FROM states "
                 "WHERE BINARY name = '{}' "
-                "ORDER BY id ASC ").format(state_name)
+                "ORDER BY id ASC ".format(state_name))
 
     # fetch data and print
     rows = cur.fetchall()
