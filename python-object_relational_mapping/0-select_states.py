@@ -6,6 +6,7 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
+    """ takes in 3 arguments and prints rows """
     # collecting data from input
     username = sys.argv[1]
     password = sys.argv[2]
