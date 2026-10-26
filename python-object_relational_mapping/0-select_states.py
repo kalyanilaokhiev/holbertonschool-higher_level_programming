@@ -14,8 +14,8 @@ if __name__ == "__main__":
     db = MySQLdb.connect(host="localhost",
                          port=3306,
                          user=username,
-                         password=password,
-                         database=database)
+                         passwd=password,
+                         db=database)
 
     cur = db.cursor()
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # fetch data and prin
     rows = cur.fetchall()
     for row in rows:
-        print(f"{row},", end=" ")
+        print(row)
 
     cur.close()
     db.close()
