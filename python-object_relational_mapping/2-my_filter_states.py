@@ -21,9 +21,9 @@ if __name__ == "__main__":
 
     # create query
     # states with a name starting with N
-    cur.execute("SELECT * FROM states "
-                "WHERE name = {}"
-                "ORDER BY id ASC").format(state_name)
+    cur.execute("SELECT * FROM states"
+                "WHERE name = {} " 
+                "ORDER BY id ASC ").format(state_name)
 
     # fetch data and print
     rows = cur.fetchall()
