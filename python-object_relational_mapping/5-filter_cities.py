@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # states with a name starting with N
     cur.execute("SELECT cities.name FROM cities "
                 "INNER JOIN states ON cities.state_id = states.id "
-                "WHERE BINARY name = %s "
+                "WHERE BINARY states.name = %s "
                 "ORDER BY cities.id ASC ", (state_name,))
 
     # fetch data and print
