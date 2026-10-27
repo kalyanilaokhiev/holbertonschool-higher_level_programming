@@ -28,8 +28,8 @@ if __name__ == "__main__":
 
     # fetch data and print
     rows = cur.fetchall()
-    for row in rows:
-        print(row)
+    # joining rows together by ,
+    print(", ".join(row[0] for row in rows))
 
     cur.close()
     db.close()
