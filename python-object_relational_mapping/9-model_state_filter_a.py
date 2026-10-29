@@ -26,9 +26,7 @@ if __name__ == "__main__":
     states = states.filter(states.contains("a"))
 
     # print results
-    if states is None:
-        print("Nothing\n")
-    else:
-        print("{}: {}".format(states.id, states.name))
+    for state in states:
+        print("{}: {}".format(state.id, state.name))
 
     session.close()
