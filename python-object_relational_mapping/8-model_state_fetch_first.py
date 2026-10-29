@@ -22,7 +22,7 @@ if __name__ == "__main__":
 
     # query
     states = session.query(State)
-    # applies a limit of one and returns the first result 
+    # applies a limit of one and returns the first result
     states = states.order_by(State.id.asc()).first()
 
     # print results
