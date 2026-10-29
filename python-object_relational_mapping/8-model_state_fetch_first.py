@@ -26,7 +26,7 @@ if __name__ == "__main__":
 
     # print results
     if states is None:
-        print("Nothing")
+        print("Nothing\n")
     else:
         print ("{}: {}".format(states[0].id, states[0].name))
 
