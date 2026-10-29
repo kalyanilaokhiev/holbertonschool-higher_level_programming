@@ -23,7 +23,7 @@ if __name__ == "__main__":
     # query
     states = session.query(State)
     states = states.order_by(State.id.asc())
-    states = states.filter(states.contains("a"))
+    states = states.filter(states.name.like('%a%'))
 
     # print results
     for state in states:
