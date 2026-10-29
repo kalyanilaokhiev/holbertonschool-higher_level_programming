@@ -11,7 +11,6 @@ if __name__ == "__main__":
     username = sys.argv[1]
     password = sys.argv[2]
     database = sys.argv[3]
-    state_name = sys.argv[4]
 
     # create engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'
@@ -22,12 +21,12 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    # query
-    states = session.query(State)
-    states = states.filter(State.name.in_([6], ["Louisiana"])).all()
+    # add
+    add_state = State(name='Louisiana')
+    session.add(add_state)
+    session.commit
 
     # print results
-    for state in states:
-        print("{}: {}".format(state.id, state.name))
+    print(add_state.id)
 
     session.close()
