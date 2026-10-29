@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     # query
     states = session.query(State)
-    states = states.filter(State.name.in_(["Louisiana"], [6])).all()
+    states = states.filter(State.name.in_([6], ["Louisiana"])).all()
 
     # print results
     for state in states:
