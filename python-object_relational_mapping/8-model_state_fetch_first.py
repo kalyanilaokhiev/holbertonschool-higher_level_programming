@@ -22,12 +22,13 @@ if __name__ == "__main__":
 
     # query
     states = session.query(State)
-    states = states.order_by(State.id.asc()).all()
+    # applies a limit of one and returns the first result 
+    states = states.order_by(State.id.asc()).first()
 
     # print results
     if states is None:
         print("Nothing\n")
     else:
-        print("{}: {}".format(states[0].id, states[0].name))
+        print("{}: {}".format(states.id, states.name))
 
     session.close()
