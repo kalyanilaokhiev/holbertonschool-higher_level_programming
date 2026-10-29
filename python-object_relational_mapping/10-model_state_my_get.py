@@ -24,7 +24,7 @@ if __name__ == "__main__":
 
     # query
     states = session.query(State)
-    states = states.filter(State.name == state_name).first
+    states = states.filter(State.name == state_name).first()
 
     # print results
     if states is None:
