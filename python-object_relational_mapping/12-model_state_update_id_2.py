@@ -21,11 +21,13 @@ if __name__ == "__main__":
     session = Session()
 
     # look fro the id
-    change_state = session.query(State)
-    change_state = change_state.filter(State.id == 2).first()
+    del_state = session.query(State)
+    del_state = del_state.filter(del_state.name.like('%a%')).all()
 
-    # update the name
-    change_state.name = "New Mexico"
+
+    # delete matching
+    for state in del_state:
+        session.delete(state)
     session.commit()
 
     session.close()
