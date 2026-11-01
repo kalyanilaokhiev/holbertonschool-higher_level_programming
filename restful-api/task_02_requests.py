@@ -7,8 +7,7 @@ import csv
 def fetch_and_print_posts():
     """Function that fetches all post from JSONPlaceholder"""
     # printing response codes
-    responses = requests.get('https://api.github.com/user',
-                             auth=('user', 'pass'))
+    responses = requests.get('https://jsonplaceholder.typicode.com/posts')
     print("Status Code: {}".format(responses.status_code))
 
     # If the request was sucessfull
@@ -24,8 +23,8 @@ def fetch_and_save_posts():
     Function that fetches all post from JSONPlaceholder
     and saves it
     """
-    responses = requests.get('https://api.github.com/user',
-                             auth=('user', 'pass'))
+    responses = requests.get('https://jsonplaceholder.typicode.com/posts')
+
     if responses.status_code == 200:
         posts = responses.json()
 
