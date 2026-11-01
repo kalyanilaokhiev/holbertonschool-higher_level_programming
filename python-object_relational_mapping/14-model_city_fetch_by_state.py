@@ -26,7 +26,7 @@ if __name__ == "__main__":
     # query
     queries = session.query(State, City)
     queries = queries.filter(State.id == City.state_id)
-    queries = queries.prder_by(City.id.asc()).all()
+    queries = queries.order_by(City.id.asc()).all()
 
     # print results
     for state, city in queries:
