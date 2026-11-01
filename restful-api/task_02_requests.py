@@ -31,7 +31,7 @@ def fetch_and_save_posts():
         # creating list of dictionaries
         posts_dict = []
         for i in posts:
-            posts_dict.appendgit(
+            posts_dict.append(
                 {"id": i.get("id"),
                 "title": i.get("title"),
                 "body": i.get("body")}
