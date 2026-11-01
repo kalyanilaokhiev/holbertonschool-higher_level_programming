@@ -6,7 +6,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 from model_city import Base, City
-
 import sys
 
 if __name__ == "__main__":
@@ -30,6 +29,6 @@ if __name__ == "__main__":
 
     # print results
     for state, city in queries:
-        print("{}: ({}) {}".format(state.name, state.id, city.name))
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()
