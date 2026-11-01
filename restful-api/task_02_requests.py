@@ -9,7 +9,7 @@ def fetch_and_print_posts():
     # printing response codes
     responses = requests.get('https://api.github.com/user',
                              auth=('user', 'pass'))
-    print("Status Code: {}".format(responses.status_codes))
+    print("Status Code: {}".format(responses.status_code))
 
     # If the request was sucessfull
     if responses.status_code == 200:
