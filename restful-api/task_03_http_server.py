@@ -49,7 +49,7 @@ class simpleHTTPServer(BaseHTTPRequestHandler):
             self.send_header("Content-Type", "plain/text")
             self.end_headers()
 
-            self.wfile.write("404 Not Found".encode('utf-8'))
+            self.wfile.write("Endpoint not found".encode('utf-8'))
 
 
 def run(server_class=HTTPServer, handler_class=simpleHTTPServer):
