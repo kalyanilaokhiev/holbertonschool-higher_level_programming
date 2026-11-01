@@ -37,10 +37,10 @@ def fetch_and_save_posts():
                 "body": i.get("body")}
             )
 
-    # save to cvs file
-    with open('posts.csv', mode='w', newline='') as csvfile:
-        fieldnames = ['id', 'title', 'body']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        # save to cvs file
+        with open('posts.csv', mode='w', newline='') as csvfile:
+            fieldnames = ['id', 'title', 'body']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
-        writer.writeheader()
-        writer.writerows(posts_dict)
+            writer.writeheader()
+            writer.writerows(posts_dict)
