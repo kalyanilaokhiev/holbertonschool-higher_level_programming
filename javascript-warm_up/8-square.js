@@ -5,9 +5,9 @@ let i = 0;
 
 if (Number.isInteger(x)) {
   while (i < x){
-    console.log('C is fun');
+    console.log('X'.repeat(x));
     i++;
   }
 } else {
-  console.log('Missing number of occurrences');
+  console.log('Missing size');
 }
